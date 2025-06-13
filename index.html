@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Spliters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header><h1>Bill Splitter</h1></header>
+    <main>
+        <div class="bill-generator">
+            <p>Bill</p>
+            <div class="input-container">
+                ₹<input type="number" for="bill" name="bill" class="bill" id="bill" required>
+            </div>
+            <p>Select Tip</p>
+            <div class="tip-container">
+                <button class="discount tip-btn not-allowed" discount="5" disabled>5%</button>
+                <button class="discount tip-btn not-allowed" discount="10" disabled>10%</button>
+                <button class="discount tip-btn not-allowed" discount="15" disabled>15%</button>
+                <button class="discount tip-btn not-allowed" discount="25" disabled>25%</button>
+                <button class="discount tip-btn not-allowed" discount="50" disabled>50</button>
+                <button class="discount tip-btn not-allowed" discount="75" disabled>75%</button>
+            </div>
+            <input type="number" class="custom-input bill not-allowed"  placeholder="Customer Tip In Percentage">
+            <p>Number of People</p>
+            <input type="number" class="custom-input bill not-allowed people" placeholder="Number of People" required>
+            <button class="generate-bill tip-btn not-allowed" disabled>Generate Bill</button>
+        </div>
+
+        <div class="invoice">
+            <p class="lol">Tip Amount <span class="tip amount"></span></p>
+            <p class="lol">Total <span class="total amount total-amount"></span></p>
+            <p class="lol">Each Person Bill <span class="each-person amount"></span></p>
+            <button class="reset tip-btn not-allowed" disabled>Reset</button>
+        </div>
+    </main>
+    
+</body>
+</html>

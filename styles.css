@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family:sans-serif;
+}
+body{
+    padding:15px;
+}
+header h1{
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.bill{
+    padding:8px 4px;
+     outline: none;
+    appearance: none;
+}
+
+p{
+    margin:20px 0 8px;
+}
+.input-container input{
+    border: none;
+}
+.input-container{
+ padding-left:8px;
+ padding-right:8px;   
+}
+.input-container,.bill{
+    border:1px solid black;
+    border-radius: 6px;
+}
+.tip-container{
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: space-between;
+     gap:10px;
+}
+.tip-btn{
+    background-color:#9c60ff;
+    border-radius: 5px;
+    padding:10px;
+    cursor: pointer;
+    color:white;
+    width:30%;
+    border:none
+}
+.custom-input{
+    width:100%;
+    margin:12px 0;
+    background: #DDDDDD;
+    font-size:16px;
+    border:none;
+}
+.generate-bill{
+    width:100%;
+}
+.invoice{
+    margin-top:20px;
+    padding:30px;
+    border: none;
+    border-radius:12px;
+    background-color: #34568b;
+    color:white;
+    height:343px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.amount{
+    font-size:16px;
+    font-weight: 700;
+}
+.reset{
+    width: 100%;
+    background-color:#DDDDDD;
+    color:black;
+}
+.selected{
+    outline: 4px solid rgba(255, 162, 0, 0.888);
+}
+.not-allowed{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.lol, .lol span{
+    font-size:20px;
+    display:flex;
+    justify-content: space-between;
+}
+@media (min-width:550px) {
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bill-generator,.invoice{
+        width: 48%;
+    }
+    .input-container{
+        height:40px;
+    }
+    .input-container input{
+        width:70%;
+        height: 35px;
+    }
+    .invoice{
+        margin-top:0;;
+    }
+}
