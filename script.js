@@ -6,7 +6,7 @@ const generateBill=document.querySelector('.generate-bill');
 const tipAmount=document.querySelector('.amount');
 const totalAmount=document.querySelector('.total-amount');
 const eachPersonAmount=document.querySelector('.each-person');
-const reset=document.querySelector('.reset-btn');
+const reset=document.querySelector('.reset');
 let numOfPeople;
 let totalBill;
 let discount;
