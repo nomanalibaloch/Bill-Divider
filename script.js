@@ -6,7 +6,7 @@ const generateBill=document.querySelector('.generate-bill');
 const tipAmount=document.querySelector('.amount');
 const totalAmount=document.querySelector('.total-amount');
 const eachPersonAmount=document.querySelector('.each-person');
-const reset=document.querySelector('.reset);
+const reset=document.querySelector('.reset');
 let numOfPeople;
 let totalBill;
 let discount;
@@ -63,12 +63,14 @@ people.addEventListener('input',(e)=>{
     }
 })
 generateBill.addEventListener('click',()=>{
+    reset.classList.remove('not-allowed');
+    reset.removeAttribute('disabled');
     let totaltip=totalBill*discount/100;
     tipAmount.innerText= '₹'+totaltip;
     let totalBillAmount=totalBill+totaltip
     totalAmount.innerText='₹'+totalBillAmount;
     eachPersonAmount.innerText='₹'+(totalBillAmount/numOfPeople);
 })
-reset.addEventlistener('click',()=>{
-        location.reload();
+reset.addEventListener('click',()=>{
+    location.reload();
 })
