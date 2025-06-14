@@ -6,6 +6,7 @@ const generateBill=document.querySelector('.generate-bill');
 const tipAmount=document.querySelector('.amount');
 const totalAmount=document.querySelector('.total-amount');
 const eachPersonAmount=document.querySelector('.each-person');
+const reset=document.querySelector('.reset);
 let numOfPeople;
 let totalBill;
 let discount;
@@ -67,4 +68,7 @@ generateBill.addEventListener('click',()=>{
     let totalBillAmount=totalBill+totaltip
     totalAmount.innerText='₹'+totalBillAmount;
     eachPersonAmount.innerText='₹'+(totalBillAmount/numOfPeople);
+})
+reset.addEventlistener('click',()=>{
+        location.reload();
 })
